@@ -74,9 +74,22 @@ public class Restaurant {
     public void setCloseTime(LocalTime closingTime) {
         this.closingTime = closingTime;
     }
-
+    public int getFoodCost(String foodItem) {
+        int foodPrice = 0;
+        for(Item item: menu) {
+            if(item.getName().equals(foodItem)) {
+                foodPrice = item.getCost();
+            }
+        }
+        return foodPrice;
+    }
     public int getTotalOrderCost(String[] foodItemList) {
-       return 0;
+        int totalCost = 0;
+        for(String order:foodItemList) {
+            int cost = getFoodCost(order);
+            totalCost= totalCost + cost;
+        }
+        return totalCost;
     }
 
 
