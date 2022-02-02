@@ -75,6 +75,11 @@ public class Restaurant {
         this.closingTime = closingTime;
     }
 
+    public int getTotalOrderCost(String[] foodItemList) {
+       return 0;
+    }
+
+
 
 
 }

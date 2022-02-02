@@ -51,5 +51,9 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+    @Test
+    public void getOrderPrice_should_return_correct_order_value() {
+        String[] orderList = new String[]{"Vegetable lasagne", "Sweet corn soup"};
+        assertEquals(388,restaurant.getTotalOrderCost(orderList));
+    }
 }

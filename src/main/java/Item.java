@@ -18,5 +18,8 @@ public class Item {
                 + "\n"
                 ;
     }
+    public int getCost() {
+        return price;
+    }
 
 }
